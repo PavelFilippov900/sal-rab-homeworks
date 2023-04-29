@@ -7,17 +7,21 @@ function calcShipping(sum, min, shipping) {
 
     let shippingSum; // создайте переменную shippingSum
 
-    if(productsSum == 0) {  // если productsSum равно 0,
-       shippingSum = 0;     // то shippingSum присвоить значение 0
-    } 
-    
-    if(productsSum >= freeShippingMinSum) {  // если productsSum Больше или равна freeShippingMinSum,
-       shippingSum = 0;                      // то shippingSum присвоить значение 0
+    if(productsSum == 0 || productsSum >= freeShippingMinSum) {  
+       shippingSum = 0;                                          
+    } else {
+      shippingSum = shippingPrice;
     }
     
-    if(productsSum >0 && productsSum < freeShippingMinSum) {  // если productsSum больше 0 и меньше freeShippingMinSum,
-       shippingSum = shippingPrice;                           // то shippingSum присвоить значение shippingPrice
-    }
+    // если productsSum равно 0,
+    // то shippingSum присвоить значение 0
+
+    // если productsSum Больше или равна freeShippingMinSum,
+    // то shippingSum присвоить значение 0
+        
+    // если productsSum больше 0 и меньше freeShippingMinSum,
+    // то shippingSum присвоить значение shippingPrice
+    
     
     // Конец решения задания №2.1.
 
